@@ -1,0 +1,5 @@
+A quick and dirty command-line todo-list manager. Aimed primarily at quickness and ease of use.
+Philosophy: A single command with minimum number of extraneous characters (besides the actual todo-item itself) should do the trick.
+Keep it simple.
+
+Store todo-items locally (for now) and try pushing to gmail/dropbox/some-majorly-universal-online-storage-space. Again, the focus is on less hassle and more of how quickly the user can get the actual work done and move on with her life. 
