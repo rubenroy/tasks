@@ -37,21 +37,33 @@ class TaskManager:
 		pickleLoad.close()	
 
 # main()
-import sys,pickle
+import argparse,pickle
+
 TM = TaskManager()
 TM.loadTasks()
 
-if(len(sys.argv)>1):
-	if(sys.argv[1] == '-a'):
-		TM.addTask(Task(sys.argv[2]))
+parser = argparse.ArgumentParser(description='A quick and dirty command-line todo-list manager')
+parser.add_argument('-a','--add', help='Add todo item', required=False)
+parser.add_argument('-l','--list', help='List all tasks', required=False, action = "store_true")
+parser.add_argument('-v','--verbose', help='Verbose output', required=False, action = "store_true")
+args = vars(parser.parse_args())
 
-for i in range(len(sys.argv)):
-	if(sys.argv[i] == '-a'):
-		TM.addTask( Task(sys.argv[i+1]) )
-	elif (sys.argv[i] == '-l'):
-		TM.listTasks()
+if args['add'] is not None:
+	TM.addTask(Task(args['add']))
+	if args['verbose']:
+		print "Added task:", args['add']
+
+if (args['list']):
+	TM.listTasks()
+
 
 TM.saveTasks()
 #TM.listTasks()
+
+
+
+
+
+
 
 
