@@ -3,3 +3,11 @@ Philosophy: A single command with minimum number of extraneous characters (besid
 Keep it simple.
 
 Store todo-items locally (for now) and try pushing to gmail/dropbox/some-majorly-universal-online-storage-space. Again, the focus is on less hassle and more of how quickly the user can get the actual work done and move on with her life. 
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -a ADD, --add ADD     add todo item
+  -l, --list            list all tasks
+  -v, --verbose         verbose output
+  -f FILE, --file FILE  specify file
+
